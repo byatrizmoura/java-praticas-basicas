@@ -219,14 +219,25 @@ https://docs.oracle.com/en/java/javase/21/docs/api/index.html
 
 - Comentários
 inline  //
-multi line /*
-*
-*
-*/
-documentation /**
-*
-*
-*/
+
+multi line /*  *  *  */
+
+documentation /**  *  *  */
 
 - gerador de documentação
 javadoc -encoding UTF-8 -docencoding ISO-8859-1  -d ../docs  src/*.java
+
+
+# Terminal e argumentos
+- Terminal
+bin - Pasta de arquivos compilados
+java + NomeDoArquivo (.class) executa
+- Argumentos
+args
+Quando executamos uma classe que contenha o método main, o mesmo permite que passemos um array [] de argumentos do tipo String. Logo podemos após a definição da classe a ser executada informar estes parâmetros.
+
+
+- Scanner
+Recebe dados de forma mais segura via terminal.
+Quando tiver valores decimais é bom colocar na convenção americana
+useLocale(Locale.US)
