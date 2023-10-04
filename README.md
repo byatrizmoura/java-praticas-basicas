@@ -136,3 +136,97 @@ throws Exception - informa que podera gerar uma exceção
 - Visivel em toda aplicação, somente em pacotes, atraves de herança ou a nivel a propria classe.
 private ao inicio ao invés de public
 
+# Escopo
+Ambiente onde uma variável pode ser acessada.
+Onde é declarada afeta sua visibilidade.
+
+# Palavras reservadas
+Java possui 52 palavras reservadas.
+- Controle de pacotes
+import: importa pacotes e classes dentro do código.
+package: especifica a que pacote todas as classes de um arquivo pertecem.
+
+- Modificadores de acesso
+public: acesso de qualquer classe
+private: acesso apenas dentro da classe
+protected: acesso por classes no mesmo pacote e subclasses. Uso de herança.
+
+- Primitivos
+boolean: um valor indicado true ou false
+byte: um inteiro de 8 bits (signed)
+char: um character unicode (16-bit unsigned)
+double: um número de ponto flutuante de 64 bits (signed)
+float: um núero de ponto flutuante de 32 bits (signed)
+int: um inteiro de 32 bits (signed)
+long: uum inteiro de 64 bits (signed)
+short: um inteiro de 32 bits (signed)
+void: indica que um metodo não tem retorno de valor.
+
+- Modificadores de classes, variáveis e metodos
+abstract: classe que não pode ser instanciada ou metodo que precisa ser implementado por uma subclasse não abstrata. (associada com herança, determino que uma classe terá um comportamento mas que esse comportamento precisa de uma implementação de uma classe filha)
+class: especifica uma classe
+extends:indica a superclasse que a classe está estendendo
+final: impossibilita que uma classe seja estendida, que um metodo seja sobrescrito ou que uma variavel seja reiniciada.
+implements: indica as interfaces que uma classe irá implementar.
+interface: especifica uma interface.
+native: indica que um metodo esta escrito em uma linguagem dependente de plataforma, como o C
+new: instancia um novo objeto, chamando seu construtor
+static: faz um metodo ou variavel pertencer à classe ao inves de às instancias.
+strictfp: usado em frente a um método ou classe para indicar que os numeros de ponto flutuante seguirão as regras de ponto flutuante em todas as expressoes.
+synchronized: indica que um metodo só pode ser acessado por uma thread de cada vez.
+transient: impede a serialização de campos.
+volatile: indica que uma variavel pode ser alterada durante o uso de threads.
+
+- Controle de fluxo dentro de um bloco de codigo
+break: sai do bloco de codigoem que ele esta
+case: executa um bloco de codigo dependendo do teste do switch
+continue: pula a execução do codigo que viria após essa linha e vai para a proxima passagem do loop
+default: executa esse bloco de codigo caso nenhum dos teste de switch-case seja verdadeiro
+do: executa um bloco de código uma vez, e então realiza um teste em conjunto com o while para determinar se o bloco deverá ser executado novamente
+else: executa um bloco de código alternativo caso o teste if seja falso
+for: usado para realizar um loop condicional de um bloco de código
+if: usado para realizar um teste lógico de verdadeiro o falso
+instanceof: determina se um objeto é uma instância de determinada classe, superclasse ou interface
+return: retorna de um método sem executar qualquer código que venha depois desta linha (também pode retornar uma variável)
+switch: indica a variável a ser comparada nas expressões case
+while: executa um bloco de código repetidamente enquanto a condição for verdadeira
+
+- Tratamento de erros
+assert: testa uma expressão condicional para verificar uma suposição do programador
+catch: declara o bloco de código usado para tratar uma exceção
+finally: bloco de código, após um try-catch, que é executado independentemente do fluxo de programa seguido ao lidar com uma exceção
+throw:usado para passar uma exceção para o método que o chamou
+throws: indica que um método pode passar uma exceção para o método que o chamou
+try: bloco de código que tentará ser executado, mas que pode causar uma exceção
+
+- Variaveis de referencia
+super: refere-se a superclasse imediata
+this: refere-se a instância atual do objeto
+
+- Palavras reservadas não utilizadas
+const: Não utilize para declarar constantes; use public static final
+goto: não implementada na linguagem Java por ser considerada prejudicial
+
+- Literais reservados
+De acordo com a Java Language Specification, null, true e false são tecnicamente chamados de valores literais, e não keywords. Se você tentar criar algum identificador com estes valores, você também terá um erro de compilação.
+
+http://www.linhadecodigo.com.br/artigo/83/as-52-palavras-reservadas-do-java.aspx
+https://felipe-silva-aguiar.gitbook.io/dio-java/gitbook/summary
+
+# Documentação
+https://docs.oracle.com/javase/7/docs/api/java/lang/String.html
+https://docs.oracle.com/en/java/javase/21/docs/api/index.html
+
+- Comentários
+inline  //
+multi line /*
+*
+*
+*/
+documentation /**
+*
+*
+*/
+
+- gerador de documentação
+javadoc -encoding UTF-8 -docencoding ISO-8859-1  -d ../docs  src/*.java
